@@ -37,23 +37,25 @@
             gap: 8px;
         }
 
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
         .logo-icon {
             width: 40px;
             height: 40px;
-            background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
-            border-radius: 8px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 180"><polygon points="110,40 140,90 80,90" fill="%23FFD700"/><polygon points="80,90 50,140 20,90" fill="%2300A86B"/><polygon points="80,90 110,140 50,140" fill="%2332CD32"/><polygon points="140,90 170,140 110,140" fill="%23FF8C00"/><polygon points="110,140 80,90 140,90" fill="%232C3E50"/><polygon points="140,90 170,40 110,40" fill="%23FF6347"/><polygon points="170,40 200,90 140,90" fill="%23DC143C"/><polygon points="200,90 170,140 140,90" fill="%23C71585"/><polygon points="170,140 200,190 140,190" fill="%23FF4500"/><polygon points="140,90 170,140 110,140" fill="%238B008B"/><polygon points="20,90 50,40 80,90" fill="%23008B8B"/></svg>') no-repeat center;
+            background-size: contain;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 24px;
         }
 
         .logo-text {
             font-size: 32px;
             font-weight: 700;
-            color: #333;
+            color: #2c3e50;
         }
 
         .logo-tagline {
@@ -360,6 +362,11 @@
             gap: 8px;
         }
 
+        .footer-logo img {
+            height: 40px;
+            width: auto;
+        }
+
         .footer-support {
             display: flex;
             flex-direction: column;
@@ -549,66 +556,147 @@
 
         /* Mobile Styles (max 768px) */
         @media (max-width: 768px) {
+            body {
+                background: #f5f5f5;
+            }
+
             .header {
-                flex-direction: column;
-                gap: 15px;
-                padding: 15px 20px;
+                background: white;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                padding: 12px 15px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             }
 
             .logo-section {
-                width: 100%;
-                flex-direction: column;
-                align-items: flex-start;
+                width: auto;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .logo {
+                flex-direction: row;
+            }
+
+            .logo-tagline {
+                display: block;
+                font-size: 9px;
+                color: #666;
+            }
+
+            .logo-text {
+                font-size: 28px;
+                color: #2c3e50;
+            }
+
+            .logo-icon {
+                width: 35px;
+                height: 35px;
+            }
+
+            .logo img {
+                height: 35px;
+                width: auto;
             }
 
             .search-box {
-                margin-left: 0;
-                width: 100%;
-            }
-
-            .search-input {
-                width: 100%;
+                display: none;
             }
 
             .nav-menu {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-                font-size: 13px;
+                display: none;
             }
 
             .auth-buttons {
-                width: 100%;
-                justify-content: center;
+                width: auto;
+                justify-content: flex-end;
+                gap: 10px;
+            }
+
+            .login-btn {
+                color: #00a651;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .signup-btn {
+                display: none;
+            }
+
+            .donate-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+                background: #ffa726;
             }
 
             .container {
-                margin: 30px auto;
-                padding: 0 15px;
+                margin: 0;
+                padding: 25px 18px;
+                background: #f5f5f5;
             }
 
             .title {
-                font-size: 24px;
-                margin-bottom: 15px;
+                font-size: 30px;
+                margin-bottom: 18px;
+                color: #333;
+                text-align: left;
             }
 
             .subtitle {
                 font-size: 16px;
-                margin-bottom: 30px;
+                margin-bottom: 25px;
+                color: #555;
+                text-align: left;
+            }
+
+            .subtitle strong {
+                color: #333;
             }
 
             .cert-card {
-                padding: 25px 15px;
+                background: #e8f4f8;
+                padding: 30px 18px;
+                border-radius: 16px;
             }
 
-            .cert-name {
-                font-size: 26px;
+            .cert-content {
+                padding: 0;
+            }
+
+            .cert-content::before {
+                content: '';
+                display: block;
+                width: 120px;
+                height: 100px;
+                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100"><ellipse cx="35" cy="75" rx="25" ry="20" fill="%23a8d8ea" opacity="0.6"/><path d="M20 60 Q25 50 35 55 L40 65 Q30 60 25 70 Z" fill="%23a8d8ea"/><circle cx="80" cy="50" r="30" fill="%23daf0f7"/><path d="M75 50 L85 40 L95 50 L85 45 Z" fill="%2398c8d8"/></svg>') no-repeat center;
+                background-size: contain;
                 margin-bottom: 20px;
             }
 
+            .cert-name {
+                font-size: 28px;
+                margin-bottom: 18px;
+                color: #333;
+                font-weight: 700;
+            }
+
             .cert-detail {
-                font-size: 14px;
+                font-size: 15px;
                 margin-bottom: 12px;
+                color: #555;
+            }
+
+            .cert-label {
+                color: #555;
+                font-weight: 700;
+            }
+
+            .info-value {
+                color: #333;
             }
 
             .illustration {
@@ -618,60 +706,104 @@
             .scores-section {
                 flex-direction: column;
                 gap: 15px;
+                margin-top: 25px;
             }
 
             .score-card {
-                padding: 20px;
+                padding: 22px;
+                background: white;
+                border: 2px solid #333;
+                border-radius: 16px;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .score-info {
+                flex: 1;
+            }
+
+            .score-title {
+                color: #333;
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .score-description {
+                color: #555;
+                font-size: 13px;
             }
 
             .score-value {
-                font-size: 36px;
+                font-size: 48px;
+                color: #333;
+                font-weight: 700;
             }
 
             .course-info-section {
-                padding: 25px 15px;
-                margin-top: 30px;
+                padding: 25px 18px;
+                margin-top: 25px;
+                background: white;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                border-radius: 12px;
             }
 
             .section-title {
-                font-size: 22px;
-                margin-bottom: 20px;
+                font-size: 24px;
+                margin-bottom: 18px;
+                color: #333;
             }
 
             .course-description {
                 text-align: left;
                 font-size: 15px;
+                color: #555;
+                line-height: 1.6;
+            }
+
+            .modules-list {
+                margin-top: 20px;
+                margin-bottom: 30px;
             }
 
             .module-item {
-                font-size: 14px;
-                padding: 10px 0;
+                font-size: 15px;
+                padding: 12px 0;
+                color: #555;
+                border-bottom: 1px solid #e0e0e0;
             }
 
             .footer {
-                padding: 40px 20px 30px;
-                margin-top: 40px;
+                padding: 35px 18px 25px;
+                margin-top: 25px;
+                background: #1a2b3d;
             }
 
             .footer-content {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 25px;
             }
 
             .footer-title {
                 font-size: 13px;
+                color: white;
             }
 
             .footer-links a {
                 font-size: 13px;
+                color: #b8c5d6;
             }
 
             .footer-bottom {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 30px;
-                margin-top: 40px;
-                padding-top: 30px;
+                gap: 25px;
+                margin-top: 35px;
+                padding-top: 25px;
+                border-top: 1px solid #2d3e52;
+            }
+
+            .footer-logo .logo-text {
+                color: white;
             }
 
             .footer-bottom-left {
@@ -696,11 +828,12 @@
             .app-btn {
                 width: 100%;
                 justify-content: flex-start;
+                background: #2d3e52;
             }
 
             .footer-legal {
                 flex-wrap: wrap;
-                gap: 15px;
+                gap: 12px;
                 font-size: 12px;
             }
 
@@ -788,7 +921,7 @@
         <div class="logo-section">
             <div>
                 <div class="logo">
-                    <div class="logo-icon">A</div>
+                    <div class="logo-icon"></div>
                     <span class="logo-text">Alison</span>
                 </div>
                 <div class="logo-tagline">EMPOWER YOURSELF</div>
@@ -987,7 +1120,7 @@
                 <div class="footer-bottom-left">
                     <div class="footer-logo-section">
                         <div class="footer-logo">
-                            <div class="logo-icon">A</div>
+                            <div class="logo-icon"></div>
                             <span class="logo-text">Alison</span>
                         </div>
                         <div class="logo-tagline">EMPOWER YOURSELF</div>
