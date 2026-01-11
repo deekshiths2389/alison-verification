@@ -25,10 +25,69 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .logo-section {
+        .header-left {
             display: flex;
             align-items: center;
             gap: 15px;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            color: #666;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .menu-icon span {
+            width: 24px;
+            height: 3px;
+            background: #666;
+            display: block;
+        }
+
+        .search-icon {
+            font-size: 24px;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .language-selector {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 8px 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .language-selector .flag {
+            font-size: 20px;
+        }
+
+        .language-selector .lang-code {
+            font-size: 10px;
+            font-weight: bold;
+            color: #333;
+            background: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-top: 2px;
+        }
+
+        .header-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
 
         .logo {
@@ -568,17 +627,30 @@
                 gap: 10px;
                 padding: 12px 15px;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                position: relative;
+            }
+
+            .header-left {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .header-center {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
             }
 
             .logo-section {
-                width: auto;
-                flex-direction: row;
+                flex-direction: column;
                 align-items: center;
-                gap: 10px;
+                gap: 3px;
             }
 
             .logo {
                 flex-direction: row;
+                gap: 8px;
             }
 
             .logo-tagline {
@@ -588,26 +660,38 @@
             }
 
             .logo-text {
-                font-size: 28px;
+                font-size: 24px;
                 color: #2c3e50;
             }
 
             .logo-icon {
-                width: 35px;
-                height: 35px;
+                width: 30px;
+                height: 30px;
             }
 
-            .logo img {
-                height: 35px;
-                width: auto;
+            .menu-icon {
+                font-size: 20px;
             }
 
-            .search-box {
-                display: none;
+            .menu-icon span {
+                width: 20px;
+                height: 2px;
             }
 
-            .nav-menu {
-                display: none;
+            .search-icon {
+                font-size: 20px;
+            }
+
+            .language-selector {
+                padding: 6px 10px;
+            }
+
+            .language-selector .flag {
+                font-size: 18px;
+            }
+
+            .language-selector .lang-code {
+                font-size: 9px;
             }
 
             .auth-buttons {
@@ -918,31 +1002,32 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo-section">
-            <div>
+        <div class="header-left">
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="search-icon">🔍</div>
+            <div class="language-selector">
+                <span class="flag">🇬🇧</span>
+                <span class="lang-code">en</span>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <div class="logo-section">
                 <div class="logo">
                     <div class="logo-icon"></div>
                     <span class="logo-text">Alison</span>
                 </div>
                 <div class="logo-tagline">EMPOWER YOURSELF</div>
             </div>
-            <div class="search-box">
-                <input type="text" class="search-input" placeholder="What do you want to learn?">
-                <button class="search-btn">🔍</button>
-            </div>
         </div>
-        
-        <nav class="nav-menu">
-            <a href="#" class="nav-item">Explore Courses</a>
-            <a href="#" class="nav-item">Find Jobs & Careers</a>
-            <a href="#" class="nav-item">More</a>
-            <div class="free-badge">FREE<br>LMS</div>
-            <div class="donate-btn">$</div>
-        </nav>
 
         <div class="auth-buttons">
+            <div class="donate-btn">$</div>
             <a href="#" class="login-btn">Log In</a>
-            <a href="#" class="signup-btn">Sign Up</a>
         </div>
     </header>
 
@@ -957,7 +1042,7 @@
                 <h2 class="cert-name">Deekshith S.</h2>
                 
                 <div class="cert-detail">
-                    <span class="cert-label">Alison ID:</span> 48226046
+                    <span class="cert-label">Alison ID:</span> 46488973
                 </div>
                 
                 <div class="cert-detail">
